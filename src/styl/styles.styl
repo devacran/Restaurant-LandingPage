@@ -1,0 +1,87 @@
+@import './globals.styl'
+
+.header
+  height: $navHeight
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  max-width: 1200px
+  margin: 0 auto
+
+.navbar
+  ul
+    display: flex
+    width: 60%
+    padding: 0
+    margin-left: 40%;
+    justify-content: space-between
+    align-items: center
+
+.main-section
+  height: 100vh
+  background-image: url('../assets/mainSection.png')
+  background-color: gray
+  border: 1px solid transparent
+
+.about-us-section
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(234,234,255,1) 0%, rgba(255,255,255,1) 100%);
+  background-image: url('../assets/aboutSection.jpg')
+
+
+.order-section
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(234,234,255,1) 0%, rgba(255,255,255,1) 100%);
+  &__nav
+    ul
+      display: flex
+      justify-content: space-between
+      background-color: yellow
+    li
+      display: flex
+      justify-content: center
+      align-items: center
+    a
+      padding: 10px
+      cursor: pointer
+      border-bottom: 1px solid transparent
+      &:active
+        border-bottom: 1px solid red
+
+.book-section
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(234,234,255,1) 0%, rgba(255,255,255,1) 100%);
+  background-color: yellow
+  &__schedule
+    display: flex
+    justify-content: space-between
+  &__title
+    title(special)
+
+
+
+.catalog
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  grid-gap: 20px
+  padding-bottom: 100px
+
+.carousel
+  width: 100%
+  height: 500px
+  background-color: gray
+.testimonial-section
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(234,234,255,1) 0%, rgba(255,255,255,1) 100%);
+.testimonial-slider
+  display: grid
+  place-items: center
+  &__title
+    title(standard)
+  &__subtitle
+    font-size: 18px
+    color: gray
+    margin-bottom: 1em
+  &__rating
+    rating()

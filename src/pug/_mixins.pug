@@ -1,0 +1,44 @@
+mixin rating(rating) 
+  - for(let i = 0; i < rating; i++)
+    span *
+mixin searchBox 
+  form.searchBox
+    span.searchBox__icon  
+      i(class="material-icons") search
+    input(placeholder='Search Here') 
+    .button.button--submit Location
+mixin product(price, rating, name, src)
+  div.product__wrapper
+    img.product__image(src=`./assets/${src}`)
+    div.product
+      .product__container
+        .product__price price
+        .product__rating
+          +rating(rating)
+        .product__name name
+        .button.product__button Order Now
+      
+mixin carousel
+  .carousel
+
+mixin testimonialSlider
+  .testimonial-slider
+    .bigIcon: img()
+    .testimonial-slider__title Jhon Smitch
+    .testimonial-slider__subtitle ArtDirector
+    .testimonial-slider__rating 
+      +rating(5)
+    .testimonial-slider__text 
+      p Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+      | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+      | when an unknown printer took a galley of type and scrambled it to make a type 
+      | specimen book. It has survived not only five centuries, but also the leap 
+      | into electronic typesetting, remaining essentially unchanged. It was popularised 
+      |  in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and 
+      | more recently with desktop publishing software like Aldus PageMaker including versions 
+      | of Lorem Ipsum.
+    .slider-indicator.testimonial-slider__indicator indicator
+      
+    
+  
+  
