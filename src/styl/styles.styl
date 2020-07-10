@@ -17,6 +17,7 @@
     margin-left: 40%;
     justify-content: space-between
     align-items: center
+    cursor: pointer
 
 .main-section
   height: 100vh
@@ -37,7 +38,7 @@
     ul
       display: flex
       justify-content: space-between
-      background-color: yellow
+      border-bottom: 2px solid #c5c5c5
     li
       display: flex
       justify-content: center
@@ -46,8 +47,7 @@
       padding: 10px
       cursor: pointer
       border-bottom: 1px solid transparent
-      &:active
-        border-bottom: 1px solid red
+
 
 .book-section
   background: rgb(2,0,36);
@@ -59,18 +59,15 @@
   &__title
     title(special)
 
-
-
 .catalog
   display: grid
   grid-template-columns: repeat(4, 1fr)
   grid-gap: 20px
   padding-bottom: 100px
 
-.carousel
+.swiper-container
   width: 100%
   height: 500px
-  background-color: gray
 .testimonial-section
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(234,234,255,1) 0%, rgba(255,255,255,1) 100%);

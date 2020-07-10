@@ -33,6 +33,9 @@ title(type)
   box-sizing: border-box
 
 .section
+  &__title
+    color: orange
+    text-transform: uppercase
   &__container
     padding-top: $navHeight
     max-width: 1200px
@@ -61,6 +64,7 @@ title(type)
   background-color: coral
   border-radius: 8px
   color: white
+  cursor: pointer
   &--submit
     height: 100%
     max-height: 100px
@@ -103,29 +107,30 @@ title(type)
   display: flex
   justify-content: space-between
   width: 50%;
-  div
-    display: flex
-    align-items: center
-.slider__indicator
+  img
+    width: 1.5em
 
 .product
-  position: absolute;
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  display: grid
-  place-items: center
-  text-align: center;
-  background-color: gray
-  &__wrapper
-    position: relative
-    width: 100%
-    height: 300px
+  position: relative
+  width: 100%
+  height: 300px
+  &:hover &__overlay
+    display: grid
+    place-items: center
+    text-align: center
+    background-color: rgba(0, 0, 0, 0.5);
   &__image
     width: 100%
     height: 100%
     object-fit: cover
+  &__overlay
+    position: absolute;
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    display: none
+    cursor: pointer
   &__price
     display: block
     title(special)
@@ -138,3 +143,16 @@ title(type)
     margin-bottom: 1em
     title(standard)
     color: white
+
+.icon
+  margin: 0 auto
+  img
+    width: 100%
+    object-fit: cover
+    border-radius: 50%
+  &--big
+    width: 200px
+    height: 200px
+  &--small
+    width: 100px
+    height: 100px
