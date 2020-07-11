@@ -58,22 +58,31 @@
     justify-content: space-between
   &__title
     title(special)
+  &__dish
+    img
+      width: 100%
+      object-fit: cover
 
 .catalog
   overflow: hidden
+  display: -webkit-box
+  width: max-content
+  &__wrapper
+    overflow: hidden
   &__container
     display: grid
     grid-template-columns: repeat(4, 1fr)
+    grid-auto-flow: column
+    grid-template-rows: 1fr 1fr
     grid-gap: 20px
     padding-bottom: 100px
     transition: 1s
 
-.swiper-container
-  width: 100%
-  height: 500px
+
 .testimonial-section
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(234,234,255,1) 0%, rgba(255,255,255,1) 100%);
+
 .testimonial-slider
   display: grid
   place-items: center
@@ -85,3 +94,26 @@
     margin-bottom: 1em
   &__rating
     rating()
+
+.slider
+  position: relative
+  width: 100%
+  img
+    width: 100%
+    height: 100%
+  &__container
+    overflow: hidden
+  &__content
+    transition: 1s
+    display: -webkit-box
+  &__control
+    position: absolute
+    top: 50%
+    height: 50px
+    width: 50px
+    opacity: .4
+    z-index: 1
+  &__control--right
+    right: -100px
+  &__control--left
+    left: -100px

@@ -4,5 +4,15 @@ section.testimonial-section
       .section__header
         h2.section__title Testimonial
         h1 Costumer Say
-      +testimonialSlider
+      .slider
+        .slider__control.slider__control--left.testimonialSlider__control
+          img(src='./assets/chevron-left.png')
+        .slider__control.slider__control--right.testimonialSlider__control
+          img(src='./assets/chevron-right.png')
+        .slider__container
+          .slider__content#testimonialSlider
+            +testimonialContent
+            +testimonialContent
+            +testimonialContent
+
     

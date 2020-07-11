@@ -15,4 +15,16 @@ section.book-section
         div
           p Friday to Sunday
           span.book-section__title 09:00am - 22:00 pm
-      +swiper
+      .slider
+        .slider__control.slider__control--left.bookSlider__control
+          img(src='./assets/chevron-left.png')
+        .slider__control.slider__control--right.bookSlider__control
+          img(src='./assets/chevron-right.png')
+        .slider__container    
+          .slider__content#bookSlider
+            .book-section__dish
+              img(src='./assets/dish1.jpg')
+            .book-section__dish
+              img(src='./assets/dish6.jpg')
+            .book-section__dish
+              img(src='./assets/dish7.jpg')

@@ -104,6 +104,7 @@ ul {
 .product {
   position: relative;
   width: 100%;
+  max-width: 400px;
   height: 300px;
 }
 .product:hover .product__overlay {
@@ -225,19 +226,27 @@ ul {
   font-family: serif;
   font-weight: bold;
 }
+.book-section__dish img {
+  width: 100%;
+  object-fit: cover;
+}
 .catalog {
+  overflow: hidden;
+  display: -webkit-box;
+  width: -webkit-max-content;
+  width: max-content;
+}
+.catalog__wrapper {
   overflow: hidden;
 }
 .catalog__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 20px;
   padding-bottom: 100px;
   transition: 1s;
-}
-.swiper-container {
-  width: 100%;
-  height: 500px;
 }
 .testimonial-section {
   background: #020024;
@@ -261,4 +270,33 @@ ul {
   font-family: serif;
   font-weight: bold;
   color: #ff0;
+}
+.slider {
+  position: relative;
+  width: 100%;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+}
+.slider__container {
+  overflow: hidden;
+}
+.slider__content {
+  transition: 1s;
+  display: -webkit-box;
+}
+.slider__control {
+  position: absolute;
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  opacity: 0.4;
+  z-index: 1;
+}
+.slider__control--right {
+  right: -100px;
+}
+.slider__control--left {
+  left: -100px;
 }
