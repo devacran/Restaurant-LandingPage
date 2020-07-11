@@ -226,10 +226,14 @@ ul {
   font-weight: bold;
 }
 .catalog {
+  overflow: hidden;
+}
+.catalog__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   padding-bottom: 100px;
+  transition: 1s;
 }
 .swiper-container {
   width: 100%;
