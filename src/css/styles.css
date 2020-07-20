@@ -184,7 +184,9 @@ ul {
 }
 .main-section {
   height: 100vh;
+  max-height: 800px;
   background-image: url("../assets/mainSection.png");
+  background-size: cover;
   background-color: #808080;
   border: 1px solid transparent;
 }
@@ -192,6 +194,7 @@ ul {
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, #eaeaff 0%, #fff 100%);
   background-image: url("../assets/aboutSection.jpg");
+  background-size: cover;
 }
 .order-section {
   background: #020024;
@@ -210,7 +213,8 @@ ul {
 .order-section__nav a {
   padding: 10px;
   cursor: pointer;
-  border-bottom: 1px solid transparent;
+  margin-bottom: -2px;
+  border-bottom: 2px solid transparent;
 }
 .book-section {
   background: #020024;

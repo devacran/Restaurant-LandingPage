@@ -6,7 +6,6 @@ const $bookSlider = document.getElementById("bookSlider");
 const bookSliderControls = Array.from(
   document.querySelectorAll(".bookSlider__control")
 );
-
 const $testimonialSlider = document.getElementById("testimonialSlider");
 const testimonialSliderControls = Array.from(
   document.querySelectorAll(".testimonialSlider__control")
@@ -33,8 +32,16 @@ class MoveElementControl extends MoveElement {
     this.controls.map((control, controlID) => {
       control.addEventListener("click", () => {
         this.moveElement(controlID);
+        this.activeControl = control;
+        this.highlightControl();
       });
     });
+  }
+  highlightControl() {
+    this.controls.forEach((control) => {
+      control.style.borderBottom = "none";
+    });
+    this.activeControl.style.borderBottom = "2px solid orange";
   }
 }
 
